@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Elon Musk Biography</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+
+<style>
+/* ===== RESET & GLOBAL ===== */
+* {
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    font-family: 'Inter', sans-serif;
+    background: radial-gradient(circle at top, #0b1229, #050812);
+    color: #e5e7eb;
+    animation: fadeIn 1.5s ease;
+}
+
+/* ===== ANIMATIONS ===== */
+@keyframes fadeIn {
+    from { opacity: 0 }
+    to { opacity: 1 }
+}
+
+@keyframes slideUp {
+    from { transform: translateY(40px); opacity: 0 }
+    to { transform: translateY(0); opacity: 1 }
+}
+
+@keyframes float {
+    0% { transform: translateY(0) }
+    50% { transform: translateY(-15px) }
+    100% { transform: translateY(0) }
+}
+
+@keyframes pulse {
+    0% { box-shadow: 0 0 0 rgba(56,189,248,0.5) }
+    50% { box-shadow: 0 0 20px rgba(56,189,248,0.8) }
+    100% { box-shadow: 0 0 0 rgba(56,189,248,0.5) }
+}
+
+/* ===== HEADER ===== */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 8%;
+    border-bottom: 1px solid rgba(255,255,255,0.1);
+}
+
+header h1 {
+    font-family: 'Orbitron', sans-serif;
+}
+
+nav a {
+    margin-left: 20px;
+    color: #38bdf8;
+    position: relative;
+}
+
+nav a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    left: 0;
+    bottom: -6px;
+    background: #38bdf8;
+    transition: width 0.3s ease;
+}
+
+nav a:hover::after {
+    width: 100%;
+}
+
+/* ===== HERO ===== */
+.hero {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    padding: 90px 8%;
+    gap: 40px;
+}
+
+.hero-text {
+    flex: 1;
+    animation: slideUp 1.2s ease;
+}
+
+.hero-text h2 {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 2.2rem;
+}
+
+.hero-text button {
+    margin-top: 20px;
+    padding: 15px 32px;
+    border-radius: 40px;
+    border: none;
+    background: linear-gradient(90deg, #38bdf8, #6366f1);
+    font-weight: bold;
+    cursor: pointer;
+    animation: pulse 2s infinite;
+}
+
+@media (max-width: 768px) {
+    main {
+        flex-direction: column;
+        padding: 30px 5%;
+    }
+
+    section, aside {
+        flex: 1 1 100%;
+        margin-bottom: 30px;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero-text h2 {
+        font-size: 1.6rem;
+    }
+
+    nav a {
+        margin: 8px;
+        font-size: 0.9rem;
+    }
+}
+
+.hero-image img {
+    max-width: 320px;
+    border-radius: 18px;
+    animation: float 4s ease-in-out infinite;
+    transition: transform 0.4s;
+}
+
+.hero-image img:hover {
+    transform: scale(1.05);
+}
+
+/* ===== MAIN ===== */
+main {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 60px 8%;
+    gap: 40px;
+}
+
+section {
+    flex: 3;
+    background: rgba(255,255,255,0.05);
+    padding: 35px;
+    border-radius: 18px;
+    animation: slideUp 1.5s ease;
+    transition: transform 0.4s, box-shadow 0.4s;
+}
+
+section:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 0 30px rgba(99,102,241,0.3);
+}
+
+aside {
+    flex: 1;
+    background: rgba(255,255,255,0.08);
+    padding: 25px;
+    border-radius: 18px;
+    transition: transform 0.4s;
+}
+
+aside:hover {
+    transform: scale(1.03);
+}
+
+article {
+    margin-top: 30px;
+    background: rgba(0,0,0,0.4);
+    padding: 25px;
+    border-radius: 14px;
+    border-left: 4px solid #38bdf8;
+}
+
+img {
+    max-width: 100%;
+    border-radius: 14px;
+    transition: transform 0.4s;
+}
+
+img:hover {
+    transform: scale(1.05);
+}
+
+/* ===== FORM ===== */
+form input, form textarea {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 15px;
+    border-radius: 10px;
+    border: none;
+}
+
+form button {
+    width: 100%;
+}
+
+/* ===== FOOTER ===== */
+footer {
+    margin-top: 80px;
+    padding: 40px 8%;
+    text-align: center;
+    border-top: 1px solid rgba(255,255,255,0.1);
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 768px) {
+    header, .hero, main {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    nav a {
+        display: inline-block;
+        margin: 10px;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+    <h1>Elon Musk</h1>
+    <nav>
+        <a href="#about">About</a>
+        <a href="#highlights">Highlights</a>
+        <a href="#author">Author</a>
+        <a href="#purchase">Purchase</a>
+    </nav>
+</header>
+
+<section class="hero">
+    <div class="hero-text">
+        <h2>Discover the Life of Elon Musk</h2>
+        <p>Visionary. Innovator. Pioneer shaping the future of humanity.</p>
+        <button onclick="location.href='#purchase'">Buy Now</button>
+    </div>
+    <div class="hero-image">
+        <img src="coverpage.jpg" alt="Elon Musk Biography Book Cover">
+    </div>
+</section>
+
+<main>
+
+<section>
+    <h2 id="about">About the Book</h2>
+    <p>
+        Based on two years of exclusive access, this biography reveals the ambition,
+        brilliance, and volatility behind Elon Musk’s drive to change the world.
+    </p>
+
+    <h2 id="highlights">Key Highlights</h2>
+    <ol>
+        <li>Tesla & the electric revolution</li>
+        <li>SpaceX and Mars colonization</li>
+        <li>Neuralink & artificial intelligence</li>
+    </ol>
+
+    <h2 id="author">About the Author</h2>
+    <p>
+        Walter Isaacson is a celebrated biographer known for chronicling the lives of
+        history’s greatest innovators.
+    </p>
+    <img src="author.jpg" alt="Walter Isaacson" width="200 px">
+
+    <img src="einstein.jpg" alt="Walter Isaacson" width="200 px">
+
+    <img src="benjamin.jpg" alt="Walter Isaacson" width="200 px">
+
+    <img src="leonardo.jpg" alt="Walter Isaacson" width="200 px">
+
+    <article>
+        <h3>Review Insight</h3>
+        <p>
+            An intense, revealing portrait of genius — both inspiring and unsettling.
+        </p>
+    </article>
+
+    <h2 id="purchase">Contact & Purchase</h2>
+    <form>
+        <input type="text" placeholder="Name" required>
+        <input type="email" placeholder="Email" required>
+        <textarea rows="4" placeholder="Message"></textarea>
+        <button type="submit">Send</button>
+    </form>
+
+    <p>
+        Buy on
+        <a href="https://www.amazon.com/Elon-Musk-Walter-Isaacson/dp/1982181281" target="_blank">
+            Amazon
+        </a>
+    </p>
+</section>
+
+<aside>
+    <h3>Testimonials</h3>
+
+    <blockquote>
+        “One of the most compelling biographies of our time.” — Reader
+    </blockquote>
+
+    <blockquote>
+        “A bold look into the mind of a modern visionary.” — Media Review
+    </blockquote>
+
+    <blockquote>
+        “Isaacson captures both the genius and the flaws of Elon Musk with incredible detail.” — Tech Magazine
+    </blockquote>
+
+    <blockquote>
+        “An inspiring story of ambition, innovation, and risk-taking that shapes the future.” — Entrepreneur Journal
+    </blockquote>
+
+    <blockquote>
+        “A must-read for anyone interested in technology, space, and business leadership.” — Business Weekly
+    </blockquote>
+
+    <blockquote>
+        “This biography reads like a novel, yet it's grounded in meticulous research.” — Literary Times
+    </blockquote>
+
+    <blockquote>
+        “Insightful, honest, and deeply human portrait of one of the 21st century's greatest innovators.” — Science & Tech Daily
+    </blockquote>
+</aside>
+
+</main>
+
+<footer>
+    <p>&copy; 2026 Elon Musk Biography Landing Page</p>
+    <!-- Amazon reference: https://www.amazon.com/Elon-Musk-Walter-Isaacson/dp/1982181281 -->
+</footer>
+
+</body>
+</html>
